@@ -1,0 +1,27 @@
+﻿@model TatilBlogum.Models.Sınıflar.Blog
+
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Blog Ekleme İşlemi</h2>
+<br />
+<!-- method="post": Yani form işlemleri post işlemleri yapıldığında gerçekleşsin.(butona tıklandığında örneğin) -->
+<form class=" form-group" method="post">
+
+    @Html.LabelFor(x => x.Baslik)  <!--Başlığın labeli ve textboxı tanımlandı-->
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" }) <!--css eklenmiş oldu.-->
+
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-primary">Blog Ekle</button>
+</form>

@@ -1,0 +1,603 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{414CAAD5-83D1-415B-82B1-EB6F43C45605}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TatilBlogum</RootNamespace>
+    <AssemblyName>TatilBlogum</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44315</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DefaultController.cs" />
+    <Compile Include="Controllers\GirisYapController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091850542_CreatePersonelAdiColumnInHakkimizdasTable.cs" />
+    <Compile Include="Migrations\202106091850542_CreatePersonelAdiColumnInHakkimizdasTable.designer.cs">
+      <DependentUpon>202106091850542_CreatePersonelAdiColumnInHakkimizdasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202106091851427_CreateGorevColumnInHakkimizdasTable.cs" />
+    <Compile Include="Migrations\202106091851427_CreateGorevColumnInHakkimizdasTable.designer.cs">
+      <DependentUpon>202106091851427_CreateGorevColumnInHakkimizdasTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Sınıflar\Admin.cs" />
+    <Compile Include="Models\Sınıflar\AdresBlog.cs" />
+    <Compile Include="Models\Sınıflar\AnaSayfa.cs" />
+    <Compile Include="Models\Sınıflar\Blog.cs" />
+    <Compile Include="Models\Sınıflar\BlogYorum.cs" />
+    <Compile Include="Models\Sınıflar\Context.cs" />
+    <Compile Include="Models\Sınıflar\Hakkimizda.cs" />
+    <Compile Include="Models\Sınıflar\iletisim.cs" />
+    <Compile Include="Models\Sınıflar\Yorumlar.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="login\css\style.css" />
+    <Content Include="login\images\b4.jpg" />
+    <Content Include="login\index.html" />
+    <Content Include="login\w3layouts-License.txt" />
+    <Content Include="personel\about.html" />
+    <Content Include="personel\contact.html" />
+    <Content Include="personel\css\bootstrap.css" />
+    <Content Include="personel\css\style.css" />
+    <Content Include="personel\images\avatar.png" />
+    <Content Include="personel\images\icon3.png" />
+    <Content Include="personel\images\logo.jpg" />
+    <Content Include="personel\images\londra.jpg" />
+    <Content Include="personel\images\man.jpg" />
+    <Content Include="personel\images\more.png" />
+    <Content Include="personel\images\post1.jpg" />
+    <Content Include="personel\images\post2.jpg" />
+    <Content Include="personel\images\post3.jpg" />
+    <Content Include="personel\images\search.png" />
+    <Content Include="personel\images\venedik.jpg" />
+    <Content Include="personel\index.html" />
+    <Content Include="personel\js\easing.js" />
+    <Content Include="personel\js\jquery.min.js" />
+    <Content Include="personel\js\move-top.js" />
+    <Content Include="personel\single.html" />
+    <Content Include="personel\w3layouts-License.txt" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="start\assets\favicon.ico" />
+    <Content Include="start\assets\img\01.jpg" />
+    <Content Include="start\assets\img\02.jpg" />
+    <Content Include="start\assets\img\03.jpg" />
+    <Content Include="start\css\styles.css" />
+    <Content Include="start\index.html" />
+    <Content Include="start\js\scripts.js" />
+    <Content Include="webb\about.html" />
+    <Content Include="webb\blog.html" />
+    <Content Include="webb\contact.html" />
+    <Content Include="webb\css\animate.css" />
+    <Content Include="webb\css\aos.css" />
+    <Content Include="webb\css\bootstrap-datepicker.css" />
+    <Content Include="webb\css\bootstrap.min.css" />
+    <Content Include="webb\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="webb\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="webb\css\bootstrap\bootstrap.css" />
+    <Content Include="webb\css\bootstrap\bootstrap.min.css" />
+    <Content Include="webb\css\jquery-ui.css" />
+    <Content Include="webb\css\jquery.fancybox.min.css" />
+    <Content Include="webb\css\magnific-popup.css" />
+    <Content Include="webb\css\mediaelementplayer.css" />
+    <Content Include="webb\css\owl.carousel.min.css" />
+    <Content Include="webb\css\owl.theme.default.min.css" />
+    <Content Include="webb\css\style.css" />
+    <Content Include="webb\faq.html" />
+    <Content Include="webb\fonts\flaticon\backup.txt" />
+    <Content Include="webb\fonts\flaticon\font\flaticon.css" />
+    <Content Include="webb\fonts\flaticon\font\flaticon.html" />
+    <Content Include="webb\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="webb\fonts\flaticon\font\_flaticon.css" />
+    <Content Include="webb\fonts\icomoon\demo-files\demo.css" />
+    <Content Include="webb\fonts\icomoon\demo-files\demo.js" />
+    <Content Include="webb\fonts\icomoon\demo.html" />
+    <Content Include="webb\fonts\icomoon\fonts\icomoon.svg" />
+    <Content Include="webb\fonts\icomoon\Read Me.txt" />
+    <Content Include="webb\fonts\icomoon\style.css" />
+    <Content Include="webb\gallery.html" />
+    <Content Include="webb\images\hero_1.jpg" />
+    <Content Include="webb\images\hero_2.jpg" />
+    <Content Include="webb\images\img_1.jpg" />
+    <Content Include="webb\images\img_2.jpg" />
+    <Content Include="webb\images\img_3.jpg" />
+    <Content Include="webb\images\img_4.jpg" />
+    <Content Include="webb\images\img_5.jpg" />
+    <Content Include="webb\images\img_6.jpg" />
+    <Content Include="webb\images\person_1.jpg" />
+    <Content Include="webb\images\person_2.jpg" />
+    <Content Include="webb\images\person_3.jpg" />
+    <Content Include="webb\images\person_4.jpg" />
+    <Content Include="webb\images\person_5.jpg" />
+    <Content Include="webb\images\person_7.jpg" />
+    <Content Include="webb\images\topography.png" />
+    <Content Include="webb\index.html" />
+    <Content Include="webb\js\aos.js" />
+    <Content Include="webb\js\bootstrap-datepicker.min.js" />
+    <Content Include="webb\js\bootstrap.min.js" />
+    <Content Include="webb\js\jquery-3.3.1.min.js" />
+    <Content Include="webb\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="webb\js\jquery-ui.js" />
+    <Content Include="webb\js\jquery.animateNumber.min.js" />
+    <Content Include="webb\js\jquery.countdown.min.js" />
+    <Content Include="webb\js\jquery.fancybox.min.js" />
+    <Content Include="webb\js\jquery.magnific-popup.min.js" />
+    <Content Include="webb\js\jquery.stellar.min.js" />
+    <Content Include="webb\js\jquery.waypoints.min.js" />
+    <Content Include="webb\js\main.js" />
+    <Content Include="webb\js\mediaelement-and-player.min.js" />
+    <Content Include="webb\js\owl.carousel.min.js" />
+    <Content Include="webb\js\popper.min.js" />
+    <Content Include="webb\js\slick.min.js" />
+    <Content Include="webb\main.html" />
+    <Content Include="webb\readme.txt" />
+    <Content Include="webb\services.html" />
+    <Content Include="webb\single.html" />
+    <Content Include="webb\testimonials.html" />
+    <Content Include="webb\why-choose-us.html" />
+    <Content Include="WEB\about.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\28-blog.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\1.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\2.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\3.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\4.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\5.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\6.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\avatar.png" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\bg.jpg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\slider-1.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\slider-2.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\img\slider-3.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstarp-blog\style.css" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\10-list_listgroups.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\11-alerts_media_objects.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\12-image_float.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\13-forms.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\14-cards.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\15-jumbotron_breadcrumb.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\16-dropdowns.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\17-navbar.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\18-collapse_accordion.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\19-carousel.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\20-modals.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\21-tooltips.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\22-popover.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\23-scrollspy.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\img\slider-1.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\img\slider-2.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\img\slider-3.jpeg" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-grid-sistemi\24-breakpoints.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-grid-sistemi\25-grid_layout.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-grid-sistemi\26-responsive_layout.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\3-heading_text.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\4-bootstrap-colors.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\5-buttons.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\6-margin_padding.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\7-border_sizing.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\8-text_align_display.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\9-tables.html" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\Yeni Metin Belgesi.txt" />
+    <Content Include="WEB\contact.html" />
+    <Content Include="WEB\css\slider.css" />
+    <Content Include="WEB\css\style.css" />
+    <Content Include="WEB\destinations.html" />
+    <Content Include="WEB\flexbox\2-Flexbox Container\index.html" />
+    <Content Include="WEB\flexbox\3-Flexbox Alignments\index.html" />
+    <Content Include="WEB\flexbox\4-Flex Items\index.html" />
+    <Content Include="WEB\flexbox\5-Row Alignments\index.html" />
+    <Content Include="WEB\flexbox\6-Flex &amp; Margin\index.html" />
+    <Content Include="WEB\flexbox\7-Uygulama - Navbar\index.html" />
+    <Content Include="WEB\flexbox\8-Uygulama - Media Object\avatar.png" />
+    <Content Include="WEB\flexbox\8-Uygulama - Media Object\index.html" />
+    <Content Include="WEB\flexbox\9-Uygulama - Layout\index.html" />
+    <Content Include="WEB\images\about_banner.jpg" />
+    <Content Include="WEB\images\arrows.png" />
+    <Content Include="WEB\images\but.png" />
+    <Content Include="WEB\images\contact.png" />
+    <Content Include="WEB\images\dest_banner.jpg" />
+    <Content Include="WEB\images\flight.png" />
+    <Content Include="WEB\images\glass.png" />
+    <Content Include="WEB\images\group.png" />
+    <Content Include="WEB\images\head_bg.jpg" />
+    <Content Include="WEB\images\head_bot.gif" />
+    <Content Include="WEB\images\img1.jpg" />
+    <Content Include="WEB\images\img2.jpg" />
+    <Content Include="WEB\images\img3.jpg" />
+    <Content Include="WEB\images\img4.jpg" />
+    <Content Include="personel\images\italya.jpg" />
+    <Content Include="WEB\images\key.png" />
+    <Content Include="WEB\images\link1-bg.gif" />
+    <Content Include="WEB\images\logo.png" />
+    <Content Include="WEB\images\pic.jpg" />
+    <Content Include="WEB\images\pic1.jpg" />
+    <Content Include="WEB\images\pic10.jpg" />
+    <Content Include="WEB\images\pic2.jpg" />
+    <Content Include="WEB\images\pic3.jpg" />
+    <Content Include="WEB\images\pic4.jpg" />
+    <Content Include="WEB\images\pic5.jpg" />
+    <Content Include="WEB\images\pic6.jpg" />
+    <Content Include="WEB\images\pic7.jpg" />
+    <Content Include="WEB\images\pic8.jpg" />
+    <Content Include="WEB\images\pic9.jpg" />
+    <Content Include="WEB\index.html" />
+    <Content Include="WEB\js\jquery.min.js" />
+    <Content Include="WEB\js\responsiveslides.min.js" />
+    <Content Include="WEB\sass_project\css\style.css" />
+    <Content Include="WEB\sass_project\index.html" />
+    <Content Include="WEB\w3layouts-License.txt" />
+    <Content Include="WEB\Yeni klasör\5floatingimages.html" />
+    <Content Include="WEB\Yeni klasör\rowing.jpg" />
+    <Content Include="login\fonts\Asap-Regular.ttf" />
+    <Content Include="login\fonts\Audiowide-Regular.ttf" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="WEB\BOOTSTRAP\Bootstrap-TemelSınıflar\bootstrap-reference.pdf" />
+    <Content Include="WEB\sass_project\css\style.css.map" />
+    <Content Include="WEB\sass_project\sass\style.scss" />
+    <Content Include="WEB\sass_project\sass\_base.scss" />
+    <Content Include="WEB\sass_project\sass\_components.scss" />
+    <Content Include="WEB\sass_project\sass\_layout.scss" />
+    <Content Include="WEB\Yeni klasör\desktop.ini" />
+    <Content Include="Views\Shared\_TestLayout.cshtml" />
+    <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\About.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\BlogDetay.cshtml" />
+    <Content Include="Views\Default\Partial1.cshtml" />
+    <Content Include="Views\Default\Partial2.cshtml" />
+    <Content Include="Views\Default\Partial3.cshtml" />
+    <Content Include="Views\Default\Partial4.cshtml" />
+    <Content Include="Views\Default\Partial5.cshtml" />
+    <Content Include="Views\Shared\_AdminLayout.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\YeniBlog.cshtml" />
+    <Content Include="Views\Admin\BlogGetir.cshtml" />
+    <Content Include="Views\Blog\YorumYap.cshtml" />
+    <Content Include="Views\Admin\YorumListesi.cshtml" />
+    <Content Include="Views\Admin\YorumGetir.cshtml" />
+    <Content Include="Views\GirisYap\Index.cshtml" />
+    <Content Include="Views\GirisYap\Login.cshtml" />
+    <Content Include="webb\.DS_Store" />
+    <Content Include="webb\css\bootstrap.min.css.map" />
+    <Content Include="webb\fonts\.DS_Store" />
+    <Content Include="webb\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="webb\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="webb\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="webb\fonts\flaticon\font\Flaticon.woff2" />
+    <Content Include="webb\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="webb\fonts\flaticon\license\license.pdf" />
+    <Content Include="webb\fonts\icomoon\fonts\icomoon.eot" />
+    <Content Include="webb\fonts\icomoon\fonts\icomoon.ttf" />
+    <Content Include="webb\fonts\icomoon\fonts\icomoon.woff" />
+    <Content Include="webb\fonts\icomoon\selection.json" />
+    <Content Include="webb\images\.DS_Store" />
+    <Content Include="webb\prepros-6.config" />
+    <Content Include="webb\scss\.DS_Store" />
+    <Content Include="webb\scss\bootstrap\.DS_Store" />
+    <Content Include="webb\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="webb\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="webb\scss\bootstrap\bootstrap.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="webb\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="webb\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="webb\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="webb\scss\bootstrap\_alert.scss" />
+    <Content Include="webb\scss\bootstrap\_badge.scss" />
+    <Content Include="webb\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="webb\scss\bootstrap\_button-group.scss" />
+    <Content Include="webb\scss\bootstrap\_buttons.scss" />
+    <Content Include="webb\scss\bootstrap\_card.scss" />
+    <Content Include="webb\scss\bootstrap\_carousel.scss" />
+    <Content Include="webb\scss\bootstrap\_close.scss" />
+    <Content Include="webb\scss\bootstrap\_code.scss" />
+    <Content Include="webb\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="webb\scss\bootstrap\_dropdown.scss" />
+    <Content Include="webb\scss\bootstrap\_forms.scss" />
+    <Content Include="webb\scss\bootstrap\_functions.scss" />
+    <Content Include="webb\scss\bootstrap\_grid.scss" />
+    <Content Include="webb\scss\bootstrap\_images.scss" />
+    <Content Include="webb\scss\bootstrap\_input-group.scss" />
+    <Content Include="webb\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="webb\scss\bootstrap\_list-group.scss" />
+    <Content Include="webb\scss\bootstrap\_media.scss" />
+    <Content Include="webb\scss\bootstrap\_mixins.scss" />
+    <Content Include="webb\scss\bootstrap\_modal.scss" />
+    <Content Include="webb\scss\bootstrap\_nav.scss" />
+    <Content Include="webb\scss\bootstrap\_navbar.scss" />
+    <Content Include="webb\scss\bootstrap\_pagination.scss" />
+    <Content Include="webb\scss\bootstrap\_popover.scss" />
+    <Content Include="webb\scss\bootstrap\_print.scss" />
+    <Content Include="webb\scss\bootstrap\_progress.scss" />
+    <Content Include="webb\scss\bootstrap\_reboot.scss" />
+    <Content Include="webb\scss\bootstrap\_root.scss" />
+    <Content Include="webb\scss\bootstrap\_spinners.scss" />
+    <Content Include="webb\scss\bootstrap\_tables.scss" />
+    <Content Include="webb\scss\bootstrap\_toasts.scss" />
+    <Content Include="webb\scss\bootstrap\_tooltip.scss" />
+    <Content Include="webb\scss\bootstrap\_transitions.scss" />
+    <Content Include="webb\scss\bootstrap\_type.scss" />
+    <Content Include="webb\scss\bootstrap\_utilities.scss" />
+    <Content Include="webb\scss\bootstrap\_variables.scss" />
+    <Content Include="webb\scss\style.scss" />
+    <Content Include="webb\scss\_site-base.scss" />
+    <Content Include="webb\scss\_site-blocks.scss" />
+    <Content Include="webb\scss\_site-navbar.scss" />
+    <Content Include="start\.vs\ProjectSettings.json" />
+    <Content Include="start\.vs\slnx.sqlite" />
+    <Content Include="start\.vs\startbootstrap-one-page-wonder-gh-pages\v16\.suo" />
+    <Content Include="start\.vs\VSWorkspaceState.json" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="WEB\BOOTSTRAP\Bootstrap-Bileşenleri\img\slider\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202106091850542_CreatePersonelAdiColumnInHakkimizdasTable.resx">
+      <DependentUpon>202106091850542_CreatePersonelAdiColumnInHakkimizdasTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202106091851427_CreateGorevColumnInHakkimizdasTable.resx">
+      <DependentUpon>202106091851427_CreateGorevColumnInHakkimizdasTable.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>58445</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44315/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

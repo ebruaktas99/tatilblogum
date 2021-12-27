@@ -1,0 +1,37 @@
+﻿@using TatilBlogum.Models.Sınıflar
+@model List<Hakkimizda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<link rel="stylesheet" href="  ~/webb/css/bootstrap.min.css">
+
+
+
+
+<div class="site-section bg-light">
+    @foreach (var x in Model)
+    {
+        <div class="container" style="margin-top:150px;">
+
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+
+
+                    <img src="@x.FotoUrl" alt="Image" class="img-fluid rounded w-50 mb-4">
+                    <h2 class="h5 text-uppercase">@x.PersonelAdi</h2>
+                    <span class="d-block mb-4">@x.Gorev</span>
+                    <p class="lead">@x.Aciklama</p>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    }
+
+
+</div>

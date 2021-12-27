@@ -1,0 +1,33 @@
+﻿@model TatilBlogum.Models.Sınıflar.Blog
+
+
+@{
+    ViewBag.Title = "BlogGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog Güncelleme İşlemleri</h2>
+
+<br />
+<!--BeginFormun altındaki kodlar Bloggüncelle actionresult devreye girdiğinde çalışacak, adminde bulunuyor, post işlemleri olduğunda çalışır. -->
+@using (Html.BeginForm("BlogGüncelle", "Admin", FormMethod.Post))
+{
+    //verileri buraya getiriyoruz.
+    @Html.LabelFor(x => x.ID)  //IDye dışarıdan müdahaleyi engellemek için @readonly=
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly="readonly"})
+
+    @Html.LabelFor(x => x.Baslik) <!--Başlığın labeli ve textboxı tanımlandı-->
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" }) <!--css eklenmiş oldu.-->
+
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.BlogImage)
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama,15,1, new { @class = "form-control" })
+
+    <br />
+    <button class="btn btn-success">Blog Güncelle</button>
+}

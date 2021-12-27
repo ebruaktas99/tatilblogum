@@ -1,0 +1,90 @@
+﻿@using TatilBlogum.Models.Sınıflar
+@model List<iletisim>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TestLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Free Easy-Trip Website Template | Contact :: w3layouts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/WEB/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/WEB/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/start/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/webb/css/style.css">
+
+</head>
+<body>
+    <div style="height:100px; width:100%;"></div>
+
+    <div class="header-bottom">
+        <div class="wrap">
+            <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="/Default/Index/">Seyahat Fikirlerim</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="/Default/Index/">Ana Sayfa</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/About/Index/">Hakkımızda</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/Blog/Index/">Blog Yazılarım</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#!">İletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="wrap">
+            
+            <div class="contact-top">
+                <h3>İletişim Formu</h3>
+
+            </div>
+            <div class="form">
+              
+
+                    <form class="cmxform" id="contactForm" method="post">
+                        <div>
+                            <input type="text" class="textbox" value="Adınız Soyadınız:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                        </div>
+                        <div>
+                            <input type="text" class="textbox" value="E-posta:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mail';}">
+                        </div>
+                        <div>
+                            <input type="text" class="textbox" value="Konu:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Konu';}">
+                        </div>
+                        <div>
+                            <p><span class="read">Gönder</span></p>
+                        </div>
+                    </form>
+               
+                </div>
+            <div class="form1">
+                <div>
+                    <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Mesajınız:</textarea>
+                </div>
+            </div>
+            <div class="clear"></div>
+
+            <div class="clear"></div>
+           
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
